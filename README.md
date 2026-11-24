@@ -1,16 +1,57 @@
-# learn_grow_app
+# 📚 Learn & Grow
 
-A new Flutter project.
+Aplicativo Flutter de estudos e produtividade: cursos, lista de tarefas, calendário de eventos e anotações em um só lugar, com tema claro e escuro.
 
-## Getting Started
+<p align="center">
+  <img src="docs/telas.png" alt="Telas de início, cursos e produtividade" width="840"/>
+</p>
 
-This project is a starting point for a Flutter application.
+## Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+- **Splash e login/cadastro** com validação de formulário (autenticação simulada)
+- **Cursos**: lista, detalhes e progresso de cada curso
+- **Tarefas**: criar e marcar tarefas como concluídas
+- **Calendário**: eventos por dia com `table_calendar`, incluindo eventos de dia inteiro
+- **Notas**: criar, editar e excluir anotações
+- **Hub de produtividade** reunindo as ferramentas
+- **Perfil** com alternância de tema escuro, salva com `shared_preferences`
+- Navegação inferior entre as seções principais
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Os dados de cursos, eventos e notas vêm de arquivos de exemplo em `lib/data/`. Ainda não há backend.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tecnologias
+
+- Flutter e Dart 3
+- [provider](https://pub.dev/packages/provider) para estado do tema
+- [shared_preferences](https://pub.dev/packages/shared_preferences) para preferências locais
+- [table_calendar](https://pub.dev/packages/table_calendar) e [google_fonts](https://pub.dev/packages/google_fonts)
+
+## Como executar
+
+Com o [Flutter](https://docs.flutter.dev/get-started/install) 3.35 ou mais recente instalado:
+
+```bash
+flutter pub get
+flutter run
+```
+
+Para rodar os testes:
+
+```bash
+flutter test
+```
+
+## Estrutura
+
+```
+lib/
+  data/       dados de exemplo (cursos, eventos, notas)
+  models/     modelos Course, Task, Event e Note
+  providers/  ThemeProvider (tema claro/escuro)
+  screens/    telas do app
+  widgets/    componentes reutilizáveis
+```
+
+## Licença
+
+[MIT](LICENSE)
